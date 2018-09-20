@@ -199,6 +199,11 @@ class Video extends Audio
                 $pass[] = $passPrefix;
             }
 
+            if($format->getAudioCodec()=='aac'){
+                $pass[] = '-strict';
+                $pass[] = '-2';
+            }
+
             $pass[] = $outputPathfile;
 
             $passes[] = $pass;
